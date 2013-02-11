@@ -17,17 +17,15 @@ public class FallingBox extends GraphicsProgram {
         double dx = (getWidth()  - SQUARE_SIZE) / N_STEPS;
         double dy = (getHeight() - SQUARE_SIZE) / N_STEPS;
         
-        for(int i = 0; i < N_STEPS; i++) {
-        	
-        	if (square.getY() < (getHeight() - 50)) {
+        while((square.getY() < getHeight()) && (square.getX() < getWidth())) {
+
         		square.move(dx, dy);
-        		dy = dy + 0.02;
+        		dy = dy + 0.05;
         		pause(PAUSE_TIME);
-        	}
-        	else {
+        	} if (square.getY) {
         		square.setColor(Color.magenta);
-        		square.move(dx, dy);
         		dx = dx - 0.02;
+        		square.move(dx, (1 - dy));
         			
         		
             }    
